@@ -24,7 +24,7 @@ export class UserDatabase extends BaseDatabase {
 
     public insertUser = async (userDB: UserDB): Promise<void> => {
         await BaseDatabase
-        .connection(UserDatabase.TABLE_USERS)
-        .insert(userDB)
+            .connection(UserDatabase.TABLE_USERS)
+            .insert(userDB)
     };
 };
