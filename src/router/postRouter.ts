@@ -17,4 +17,7 @@ const postController = new PostController(
     )
 );
 
-postRouter.post("/signup", postController.signup);
+postRouter.post("/", postController.createPost);
+postRouter.get("/", postController.getPosts);
+postRouter.get("/:id", postController.getPostById);
+postRouter.put("/:id/vote", postController.votePost);
