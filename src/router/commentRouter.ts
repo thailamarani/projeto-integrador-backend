@@ -3,7 +3,6 @@ import { CommentController } from '../controller/CommentController';
 import { CommentBusiness } from '../business/CommentBusiness';
 import { CommentDatabase } from '../database/CommentDatabase';
 import { IdGenerator } from '../services/IdGenerator';
-import { HashManager } from '../services/HashManager';
 import { TokenManager } from '../services/TokenManager';
 import { PostDatabase } from '../database/PostDatabase';
 import { UserDatabase } from '../database/UserDatabase';

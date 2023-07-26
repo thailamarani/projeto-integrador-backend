@@ -1,10 +1,10 @@
-import { ZodError } from "zod";
-import { CommentBusiness } from "../business/CommentBusiness";
-import { CreateCommentSchema } from "../dtos/comment/createComment.dto";
+import { ZodError } from 'zod';
+import { CommentBusiness } from '../business/CommentBusiness';
+import { CreateCommentSchema } from '../dtos/comment/createComment.dto';
 import { Request, Response } from 'express';
-import { BaseError } from "../errors/BaseError";
-import { GetCommentsSchema } from "../dtos/comment/getComment.dto";
-import { VoteCommentSchema } from "../dtos/comment/voteComment.dto";
+import { BaseError } from '../errors/BaseError';
+import { GetCommentsSchema } from '../dtos/comment/getComment.dto';
+import { VoteCommentSchema } from '../dtos/comment/voteComment.dto';
 
 export class CommentController {
     constructor(
@@ -60,7 +60,7 @@ export class CommentController {
         }
     };
 
-    public voteComments = async (req: Request, res: Response) => {
+    public voteComment = async (req: Request, res: Response) => {
         try {
             const input = VoteCommentSchema.parse({
                 token: req.headers.authorization,
