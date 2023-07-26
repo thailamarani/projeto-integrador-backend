@@ -1,14 +1,14 @@
-import { PostDatabase } from "../database/PostDatabase";
-import { UserDatabase } from "../database/UserDatabase";
-import { CreatePostInputDTO, CreatePostOutputDTO } from "../dtos/post/createPost.dto";
-import { GetPostByIdInputDTO, GetPostByIdOutputDTO } from "../dtos/post/getPostById.dto";
-import { GetPostsInputDTO, GetPostsOutputDTO } from "../dtos/post/getPosts.dto";
-import { VotePostInputDTO, VotePostOutputDTO } from "../dtos/post/votePost.dto";
-import { NotFoundError } from "../errors/NotFoundError";
-import { UnauthorizedError } from "../errors/UnauthorizedError";
-import { Post, PostModel } from "../models/Post";
-import { IdGenerator } from "../services/IdGenerator";
-import { TokenManager } from "../services/TokenManager";
+import { PostDatabase } from '../database/PostDatabase';
+import { UserDatabase } from '../database/UserDatabase';
+import { CreatePostInputDTO, CreatePostOutputDTO } from '../dtos/post/createPost.dto';
+import { GetPostByIdInputDTO, GetPostByIdOutputDTO } from '../dtos/post/getPostById.dto';
+import { GetPostsInputDTO, GetPostsOutputDTO } from '../dtos/post/getPosts.dto';
+import { VotePostInputDTO, VotePostOutputDTO } from '../dtos/post/votePost.dto';
+import { NotFoundError } from '../errors/NotFoundError';
+import { UnauthorizedError } from '../errors/UnauthorizedError';
+import { Post, PostModel } from '../models/Post';
+import { IdGenerator } from '../services/IdGenerator';
+import { TokenManager } from '../services/TokenManager';
 
 export class PostBusiness {
     constructor(
@@ -145,7 +145,7 @@ export class PostBusiness {
                 } else {
                     post.decreaseVotesCount()
                     post.decreaseVotesCount()
-                    await this.postDatabase.updatePostsVote(postId, payload.id, voteAsNumber)
+                    await this.postDatabase.updatePostVote(postId, payload.id, voteAsNumber)
                 }
             } else {
                 if (vote) {
