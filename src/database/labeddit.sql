@@ -48,3 +48,13 @@ CREATE TABLE
         FOREIGN KEY (comment_id) REFERENCES comments (comment_id) ON UPDATE CASCADE ON DELETE CASCADE,
         FOREIGN KEY (user_id) REFERENCES users (user_id) ON UPDATE CASCADE ON DELETE CASCADE
     );
+
+DROP TABLE users;
+
+DROP TABLE posts;
+
+DROP TABLE comments;
+
+DROP TABLE posts_votes;
+
+DROP TABLE comments_votes;
