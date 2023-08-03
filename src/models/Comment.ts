@@ -78,13 +78,6 @@ export class Comment {
         this.votesCount -= 1
     }
 
-    public increaseCommentsCount(): void {
-        this.votesCount += 1
-    }
-    public decreaseCommentsCount(): void {
-        this.votesCount -= 1
-    }
-
     public getCreatorId(): string {
         return this.creatorId
     }
